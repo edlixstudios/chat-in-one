@@ -29,8 +29,8 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
-      "longDescription": "",
+      "identifier": "chatinone.ealbrecht.dev",
+      "longDescription": "One Desktop Application for all Chat Apps",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -58,7 +58,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "Chat in 1",
+        "title": "Chat in One",
         "width": 800
       }
     ]
