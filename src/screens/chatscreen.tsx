@@ -3,7 +3,7 @@ import {useEffect, useMemo, useRef, useState} from "react";
 import {listen} from "@tauri-apps/api/event";
 import {WebviewWindow, appWindow, LogicalPosition, LogicalSize} from "@tauri-apps/api/window";
 
-export type Chat = "whatsapp" | "telegram" | "teams";
+export type Chat = "whatsapp" | "telegram" | "teams" | "discord";
 
 export default function ChatScreen(){
 
@@ -49,6 +49,19 @@ export default function ChatScreen(){
                     case "teams":
                     chatScreen = new WebviewWindow("chat",{
                         url:"https://teams.microsoft.com/go",
+                        decorations: false,
+                        resizable:false,
+                        alwaysOnTop: true,
+                        x:(await appWindow.innerPosition()).x + width,
+                        y:(await appWindow.innerPosition()).y,
+                        height: (chatRoomRef.current as HTMLDivElement).offsetHeight,
+                        width: (chatRoomRef.current as HTMLDivElement).offsetWidth,
+                        skipTaskbar:true
+                    })
+                    break;
+                    case "discord":
+                    chatScreen = new WebviewWindow("chat",{
+                        url:"https://discord.com/login",
                         decorations: false,
                         resizable:false,
                         alwaysOnTop: true,

@@ -30,6 +30,7 @@ export default function Sidebar({openChat}:Sidebar){
                 <img src={teams} alt={"t"} className={"p-1 rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("teams")}} />
                 <img src={whatsapp} alt={"t"} className={"p-1 rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("whatsapp")}} />
                 <img src={telegram} alt={"t"} className={"p-1 rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("telegram")}} />
+                <img src={"https://seeklogo.com/images/D/discord-icon-new-2021-logo-09772BF096-seeklogo.com.png"} alt={"t"} className={"p-1 max-h-[3rem] object-contain rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("discord")}} />
             </div>
             <button className={" text-3xl hover:bg-slate-300"} >...</button>
         </div>
