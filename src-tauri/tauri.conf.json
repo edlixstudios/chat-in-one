@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "width": 1280,
+        "height": 720,
         "resizable": true,
-        "title": "Chat in One",
-        "width": 800
+        "title": "Chat in One"
       }
     ]
   }
