@@ -4,6 +4,7 @@ import telegram from "../assets/icons/telegram.svg";
 import { emit } from "@tauri-apps/api/event";
 import {Chat} from "../screens/chatscreen";
 import {RefObject, useRef} from "react";
+import Logo from "../assets/images/Logo.png";
 
 interface Sidebar{
     openChat:(chat: Chat, width: number)=>void;
@@ -25,7 +26,7 @@ export default function Sidebar({openChat}:Sidebar){
 
     return(
         <div className={"bg-slate-100 p-2 min-w-[6rem] flex flex-col items-center justify-between"} ref={sidebarRef} >
-            <h1>C1</h1>
+            <img src={Logo} alt={"logo"} className={"max-h-[64px] object-contain"} />
             <div className={"flex flex-col gap-3"} >
                 <img src={teams} alt={"t"} className={"p-1 rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("teams")}} />
                 <img src={whatsapp} alt={"t"} className={"p-1 rounded hover:bg-slate-300"}  onClick={()=>{clickedOnTeams("whatsapp")}} />
